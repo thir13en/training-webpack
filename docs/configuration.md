@@ -11,3 +11,6 @@ You can add a script to your `package.json` so it looks like this:
 },
 ```
 And then you'll be able to run it with `yarn build`.
+
+### Output
+#### PublicPath
