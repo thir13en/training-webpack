@@ -14,3 +14,11 @@ They live in the `module` entry of your `webpack` config. In these you add a `te
 	}
 }
 ```
+
+### Relevant Loaders
+#### File Loader
+Handles image and static files in general.
+#### CSS Loader
+Reads the content of a CSS file and returns them into a JS friendly way, doesn't do anything else.
+#### Style Loader
+Injects the content of the `CSS Loader` returned `object` into a JS file. 

@@ -6,9 +6,13 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _connect_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _components_create_universe_create_universe_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+
 
 
 (0,_connect_js__WEBPACK_IMPORTED_MODULE_0__.default)();
+const createUniverse = new _components_create_universe_create_universe_js__WEBPACK_IMPORTED_MODULE_1__.default();
+createUniverse.render();
 
 /***/ }),
 /* 1 */
@@ -23,6 +27,27 @@ const connect = () => {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (connect);
+
+/***/ }),
+/* 2 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+class CreateUniverse {
+	render() {
+		const button = document.createElement('button');
+		button.innerText = 'Create Universe';
+		button.onclick = () => {
+			alert('BIG BANG!');
+		}
+		document.querySelector('body').appendChild(button);
+	}
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CreateUniverse);
 
 /***/ })
 /******/ 	]);
