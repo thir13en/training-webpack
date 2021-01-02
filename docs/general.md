@@ -5,5 +5,3 @@ With `webpack`, we only need to import a single `css` and `javascript` file that
 ### Minimal setup
 You can find a minimal config example in [here](../minimal-animal/README.md). We are running webpack with the default config setting via `npx webapck`.  
 The latter command generates a new folder named `dist` with a JavaScript file named `main.js` as per default config. Now this is the only JS file we need to import in our `index.html`.
-
-### Public path
