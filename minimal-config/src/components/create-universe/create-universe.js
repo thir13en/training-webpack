@@ -1,4 +1,4 @@
-import './create-universe.css';
+import './create-universe.scss';
 
 class CreateUniverse {
 	render() {
