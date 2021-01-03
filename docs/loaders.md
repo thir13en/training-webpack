@@ -22,3 +22,13 @@ Handles image and static files in general.
 Reads the content of a CSS file and returns them into a JS friendly way, doesn't do anything else.
 #### Style Loader
 Injects the content of the `CSS Loader` returned `object` into a JS file. 
+
+#### Babel Loader
+Compiles ES down to a prior version. We can use `presets` to decide to which version to compile, for example `@babel/preset-env` compiles down to `ES5`. You will need **at least** to start playing with babel the following deps:
+```
+yarn add -D @babel/core babel-loader @babel/preset-env
+```
+We can use `plugins` and `proposal plugins` to extend and add yet-to-be-incorporated transpiling features.
+
+### Order of execution
+`Webpack` invoques loaders from right to left, so in `use: ['style-loader', 'css-loader', 'sass-loader']`, we will begin by `'sass-loader'` and finish by `'style-loader'`.
