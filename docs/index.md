@@ -5,3 +5,4 @@
 1. [Development](development.md)
 1. [General](general.md)
 1. [Loaders](loaders.md)
+1. [Plugins](plugins.md)
