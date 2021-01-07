@@ -23,3 +23,4 @@ It is a good practise to extract your CSS in a separate bundle, to allow parelel
 	],
 }
 ```
+It is interesting to note that, as happens with the JS bundle that `Webpack` emits as output, `MiniCSSExtractPlugin` extracts all our `css` files in a single one.
