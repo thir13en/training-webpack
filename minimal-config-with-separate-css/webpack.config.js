@@ -27,7 +27,13 @@ module.exports = {
 	},
 	plugins: [
 		new TerserPlugin(),
-		new HTMLWebpackPlugin(),
+		new HTMLWebpackPlugin({
+			title: 'Minimal Config',
+			filename: 'subfolder/custom-index-name.html',
+			meta: {
+				description: 'Some description',
+			}
+		}),
 		new MiniCSSExtractPlugin({ filename: 'styles.[contenthash].css' }),
 		new CleanWebpackPlugin({
 			// Here you can specify different folders that you want to clean up, apart from dist
