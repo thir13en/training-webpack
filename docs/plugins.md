@@ -21,3 +21,6 @@ new HTMLWebpackPlugin({
 	}
 }),
 ```
+
+### HTML Templating with Handlebars
+This is an easy and straightforward `html` templating plugin, you can find an example config [here](../minimal-config-handlebars/webpack.config.js).
