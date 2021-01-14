@@ -1,5 +1,4 @@
 const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -11,7 +10,7 @@ module.exports = {
 		filename: 'bundle.[contenthash].js',
 		path: path.resolve(__dirname, './dist'),		
 	},
-	mode: 'none',
+	mode: 'production',
 	module: {
 		rules: [
 			{
@@ -30,7 +29,7 @@ module.exports = {
 		],
 	},
 	plugins: [
-		new TerserPlugin(),
+		// Terser plugin included by default in production
 		new HTMLWebpackPlugin({
 			template: 'src/index.hbs',
 			filename: 'subfolder/custom-index-name.html',

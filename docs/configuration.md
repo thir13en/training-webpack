@@ -29,4 +29,5 @@ This is specially important when serving static files from a `cdn`, for example:
 
 ### Mode
 Available since `Webpack 4`, aims at performance optimization for `production` and developer experience for `development`.  
-**Production mode** enables a long list of built in plugins, including `terser` plugin.
+**Production mode** enables a long list of built in plugins, including `terser` plugin.  
+The normal procedure is to create two separate configuration files, one for `production` and another one for `development`.
