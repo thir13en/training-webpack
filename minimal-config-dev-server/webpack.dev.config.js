@@ -34,7 +34,7 @@ module.exports = {
 	plugins: [
 		new HTMLWebpackPlugin({
 			template: 'src/index.hbs',
-			filename: 'subfolder/custom-index-name.html',
+			filename: 'index.html',
 			title: 'Minimal Config With Hanldebars',
 			description: 'Some description',
 		}),

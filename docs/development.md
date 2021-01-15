@@ -13,3 +13,9 @@ Configure your `scripts` in `package.json` like:
   },
 }
 ```
+
+### Configuration options
+There are some tweaks you can do to the config, a good example is [here](../minimal-config-dev-server/package.json)
+
+### Hot Reloading
+You can achieve it with the `--hot` flag.

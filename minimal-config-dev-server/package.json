@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --config webpack.prod.config.js",
     "build:dev": "webpack --config webpack.dev.config.js",
+    "start": "webpack serve --config webpack.dev.config.js --hot",
     "test": "test"
   },
   "author": "thir13en",

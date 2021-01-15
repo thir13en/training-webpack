@@ -1,19 +1,16 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
 	entry: './src/index.js',
 	output: {
-		filename: 'bundle.js',
+		filename: 'bundle.[contenthash].js',
 		path: path.resolve(__dirname, './dist'),		
 	},
-	mode: 'development',
-	devServer: {
-		contentBase: path.resolve(__dirname, './dist'),
-		index: 'index.html',
-	},
+	mode: 'production',
 	module: {
 		rules: [
 			{
@@ -22,7 +19,7 @@ module.exports = {
 			},
 			{
 				test: /\.(s*)css$/,
-				use: ['style-loader', 'css-loader', 'sass-loader'],
+				use: [MiniCSSExtractPlugin.loader, 'css-loader', 'sass-loader'],
 			},
 			{
 				test: /\.js$/,
@@ -32,12 +29,14 @@ module.exports = {
 		],
 	},
 	plugins: [
+		// Terser plugin included by default in production
 		new HTMLWebpackPlugin({
 			template: 'src/index.hbs',
 			filename: 'subfolder/custom-index-name.html',
 			title: 'Minimal Config With Hanldebars',
 			description: 'Some description',
 		}),
+		new MiniCSSExtractPlugin({ filename: 'styles.[contenthash].css' }),
 		new CleanWebpackPlugin({
 			// Here you can specify different folders that you want to clean up, apart from dist
 			cleanOnceBeforeBuildPatters: [
