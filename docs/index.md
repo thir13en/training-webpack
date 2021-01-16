@@ -1,6 +1,7 @@
 # Index
 
 
+1. [Architecture](architecture.md)
 1. [Configuration](configuration.md)
 1. [CSS](css.md)
 1. [Development](development.md)

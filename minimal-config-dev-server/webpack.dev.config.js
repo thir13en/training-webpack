@@ -4,9 +4,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
-	entry: './src/index.js',
+	entry: {
+		universe: './src/universe.js',
+		star: './src/star.js',
+	},
 	output: {
-		filename: 'bundle.js',
+		filename: '[name].js',
 		path: path.resolve(__dirname, './dist'),		
 	},
 	mode: 'development',

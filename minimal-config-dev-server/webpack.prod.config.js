@@ -5,9 +5,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
-	entry: './src/index.js',
+	entry: {
+		universe: './src/universe.js',
+		star: './src/star.js',
+	},
 	output: {
-		filename: 'bundle.[contenthash].js',
+		filename: '[name].[contenthash].js',
 		path: path.resolve(__dirname, './dist'),		
 	},
 	mode: 'production',
@@ -32,11 +35,11 @@ module.exports = {
 		// Terser plugin included by default in production
 		new HTMLWebpackPlugin({
 			template: 'src/index.hbs',
-			filename: 'subfolder/custom-index-name.html',
+			filename: 'index.html',
 			title: 'Minimal Config With Hanldebars',
 			description: 'Some description',
 		}),
-		new MiniCSSExtractPlugin({ filename: 'styles.[contenthash].css' }),
+		new MiniCSSExtractPlugin({ filename: '[name].[contenthash].css' }),
 		new CleanWebpackPlugin({
 			// Here you can specify different folders that you want to clean up, apart from dist
 			cleanOnceBeforeBuildPatters: [
