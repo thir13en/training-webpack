@@ -14,4 +14,17 @@ optimization: {
 	}
 },
 ```
-This is also good because keep common dependencies in different bundles that can be cached by our user's browsers.
+This is also good because keep common dependencies in different bundles that can be cached by our user's browsers.  
+In addition, dependencies will only be included when needed (imported in a file of one of the bundles).
+
+### Code Splitting Custom Options
+By default, `Webpack` only extracts common dependencies when they exceed more than **30kb**, but won't do with libraries smaller than that, such as `React`. You can configure this in the **splitChunks** option of your conf:
+```javascript
+optimization: {
+	splitChuncks: {
+		chunks: 'all',
+		// size in bytes default to 30000
+		minSize: '2000',
+	}
+},
+```
