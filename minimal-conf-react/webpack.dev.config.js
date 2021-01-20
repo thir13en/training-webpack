@@ -35,11 +35,22 @@ module.exports = {
 		],
 	},
 	plugins: [
+		// Terser plugin included by default in production
 		new HTMLWebpackPlugin({
-			template: 'src/index.hbs',
-			filename: 'index.html',
-			title: 'Minimal Config With Hanldebars',
-			description: 'Some description',
+			template: 'src/page-template.hbs',
+			filename: 'universe.html',
+			title: 'Universe Generator',
+			description: 'Create a Universe',
+			// There are the chunks specified in the entry object
+			chunks: ['universe'],
+		}),
+		new HTMLWebpackPlugin({
+			template: 'src/page-template.hbs',
+			filename: 'star.html',
+			title: 'Star Generator',
+			description: 'Create a Start',
+			// There are the chunks specified in the entry object
+			chunks: ['star'],
 		}),
 		new CleanWebpackPlugin({
 			// Here you can specify different folders that you want to clean up, apart from dist
