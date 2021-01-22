@@ -1,20 +1,19 @@
-import React from 'react';
-import './create-star.scss';
+import './universe.scss';
 
-class CrateStar {
+class CreateUniverse {
 	// we need @babel/plugin-proposal-class-properties for this to work
-	buttonClass = 'create-star__button';
+	buttonClass = 'create-universe__button';
 
 	render() {
 		const button = document.createElement('button');
-		button.innerText = 'Create Star';
+		button.innerText = 'Create Universe';
 		button.classList = this.buttonClass;
 		button.onclick = () => {
 			// to demonstrate code splitting
-			alert('KATABOOM!');
+			alert('BIG BANG!');
 		}
 		document.querySelector('body').appendChild(button);
 	}
 }
 
-export default CrateStar;
+export default CreateUniverse;
