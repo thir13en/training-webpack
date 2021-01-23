@@ -7,5 +7,6 @@
 1. [Development](development.md)
 1. [General](general.md)
 1. [Loaders](loaders.md)
+1. [Module Federation](module-federation.md)
 1. [Node](node.md)
 1. [Plugins](plugins.md)
