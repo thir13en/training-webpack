@@ -10,7 +10,8 @@ module.exports = {
 	},
 	output: {
 		filename: '[name].[contenthash].js',
-		path: path.resolve(__dirname, './dist'),		
+		path: path.resolve(__dirname, './dist'),
+		publicPath: '/static/',
 	},
 	mode: 'production',
 	// This takes care of reutilization of common dependencies
