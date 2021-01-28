@@ -12,7 +12,8 @@ module.exports = {
 	},
 	output: {
 		filename: '[name].js',
-		path: path.resolve(__dirname, './dist'),		
+		path: path.resolve(__dirname, './dist'),	
+		publicPath: 'http://localhost:3000',
 	},
 	mode: 'development',
 	devServer: {

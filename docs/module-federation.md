@@ -22,11 +22,39 @@ new ModuleFederationPlugin({
 	// contains all that this webpack bundle will export to the rest of the world
 	filename: 'remoteEntry.js',
 	exposes: {
-		'./ModuleName': './Path/To/Mopdule/Module.js', 
+		'./RemoteAppModule': './Path/To/Mopdule/Module.js', 
 	}
 }),
 ```
-Note that now `webpack` needs to know the `public path` from where the app will be available, in order to serve the files:
+Note that now `webpack` needs to know the `public path` from where the app will be available, in order to serve the files, we do this in the output object:
 ```javascript
-
+output: {
+	filename: '[name].js',
+	path: path.resolve(__dirname, './dist'),
+	// notice that this shall be the url in which the application is being served
+	publicPath: 'http://localhost:3000',
+},
 ```
+This tells Webpack where to serve the dependencies that will be made available to the consumers of our federated module.  
+Now, in the consumer modules, you'd need to state which remote modules will be consumed:
+```javascript
+new ModuleFederationPlugin({
+	name: 'ModuleFederationConsumerPluginExample',
+	remotes: {
+		'RemoteAppName': 'RemoteAppName@http://localhost:3000/remoteEntry.js',
+	},
+}),
+```
+Last but not least, we need to consume explicitly the modules in our client app:
+```javascript
+import('RemoteAppName/RemoteAppModule')
+	.then(RemoteAppModule => {
+		const RemoteAppModule = RemoteAppModule.default;
+		const remoteAppModule = new RemoteAppModule();
+
+		remoteAppModule.render();
+		remoteAppModule.doMagic();
+		// You did it!
+	});
+```
+This loaded module is not bundled in the initial build, it is loaded dynamically at runtime!!
