@@ -4,6 +4,7 @@
   "description": "microfrontend architecture example build with webpack and module federation",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -12,5 +13,9 @@
     "webpack"
   ],
   "author": "santiloopz",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.18.0",
+    "webpack-cli": "^4.4.0"
+  }
 }
