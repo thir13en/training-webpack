@@ -58,3 +58,8 @@ import('RemoteAppName/RemoteAppModule')
 	});
 ```
 This loaded module is not bundled in the initial build, it is loaded dynamically at runtime!!
+
+### Module are consumed at Runtime!
+If you perform any change in some of the federated modules, are the consumer will benefit from the updates, since the modules are consumed at runtime.
+
+### Microfrontends, the new paradigm

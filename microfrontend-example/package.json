@@ -1,0 +1,16 @@
+{
+  "name": "microfrontend-example",
+  "version": "1.0.0",
+  "description": "microfrontend architecture example build with webpack and module federation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "module-federation",
+    "microfrontend",
+    "webpack"
+  ],
+  "author": "santiloopz",
+  "license": "ISC"
+}
