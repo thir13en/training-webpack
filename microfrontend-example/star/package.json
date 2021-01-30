@@ -1,0 +1,20 @@
+{
+  "name": "star",
+  "version": "1.0.0",
+  "description": "star generator",
+  "main": "index.js",
+  "author": "santiloopz",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.prod.config.js",
+    "build:dev": "webpack --config webpack.dev.config.js"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "~3.0.0",
+    "handlebars": "~4.7.6",
+    "handlebars-loader": "~1.7.1",
+    "html-webpack-plugin": "~4.5.1",
+    "webpack": "~5.19.0",
+    "webpack-cli": "~4.4.0"
+  }
+}
