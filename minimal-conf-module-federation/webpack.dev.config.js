@@ -44,7 +44,7 @@ module.exports = {
 			filename: 'universe.html',
 			title: 'Universe Generator',
 			description: 'Create a Universe',
-			// There are the chunks specified in the entry object
+			// These are the chunks specified in the entry object
 			chunks: ['universe'],
 		}),
 		new HTMLWebpackPlugin({
@@ -52,7 +52,7 @@ module.exports = {
 			filename: 'star.html',
 			title: 'Star Generator',
 			description: 'Create a Start',
-			// There are the chunks specified in the entry object
+			// These are the chunks specified in the entry object
 			chunks: ['star'],
 		}),
 		new CleanWebpackPlugin({
