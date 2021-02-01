@@ -4,7 +4,7 @@ Plugins are `JavaScript` libraries that can do everything that `loaders` can't d
 
 ### Minify
 You can minify files with `terser` plugin. Interesting to check usage in the very same `webpack` docs.  
-Custom example:
+Custom example
 ```javascript
 {
 	module: {
