@@ -4,7 +4,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
-		star: './src/star.js',
+		'cluster-galaxy': './src/cluster-galaxy.js',
 	},
 	output: {
 		path: path.resolve(__dirname, './dist'),
@@ -28,9 +28,9 @@ module.exports = {
 		}),
 		new HTMLWebpackPlugin({
 			template: 'src/index.hbs',
-			filename: 'star.html',
-			title: 'Giant Blue Star',
-			description: 'Shining as usual',
+			filename: 'cluster-galaxy.html',
+			title: 'Cluster Galaxy',
+			description: 'Huge thingy',
 		}),
 	],
 }
