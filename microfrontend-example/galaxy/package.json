@@ -1,9 +1,8 @@
 {
   "author": "santiloopz",
-  "name": "microfrontend-example",
+  "name": "galaxy",
   "version": "1.0.0",
   "description": "microfrontend architecture example build with webpack and module federation",
-  "main": "index.js",
   "license": "ISC",
   "keywords": [
     "module-federation",

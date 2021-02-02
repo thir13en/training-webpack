@@ -3,14 +3,14 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+	mode: 'development',
 	entry: {
-		universe: './src/universe.js',
+		galaxy: './src/galaxy.js',
 	},
 	output: {
 		filename: '[name].js',
 		path: path.resolve(__dirname, './dist'),
 	},
-	mode: 'development',
 	devServer: {
 		contentBase: path.resolve(__dirname, './dist'),
 		index: 'index.html',
@@ -24,10 +24,10 @@ module.exports = {
 	plugins: [
 		new HTMLWebpackPlugin({
 			template: './src/index.hbs',
-			filename: 'universe.html',
-			title: 'Universe Generator',
-			description: 'Create a Universe',
-			chunks: ['universe'],
+			filename: 'galaxy.html',
+			title: 'Galaxy Generator',
+			description: 'Create a galaxy',
+			chunks: ['galaxy'],
 		}),
 		new CleanWebpackPlugin({
 			cleanOnceBeforeBuildPatters: ['**/*', path.join(process.cwd(), 'build/**/*')],
