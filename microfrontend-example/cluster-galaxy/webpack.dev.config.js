@@ -1,6 +1,7 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const { ModuleFederationPlugin } = require('webpack').container;
 
 module.exports = {
 	entry: {
@@ -35,6 +36,13 @@ module.exports = {
 			filename: 'cluster-galaxy.html',
 			title: 'Cluster Galaxy',
 			description: 'Huge thingy',
+		}),
+		new ModuleFederationPlugin({
+			name: 'Star',
+			filename: 'star.js',
+			exposes: {
+				'./Star': './src/star/star.js', 
+			}
 		}),
 	],
 }
