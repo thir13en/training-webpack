@@ -1,4 +1,4 @@
-import Star from './star.js'
+import Star from './star/star.js'
 import style from './style.scss';
 
 console.log('hey ho, lets go!');

@@ -2,23 +2,4 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	.star {
-		border-radius: 22em;
-		border: 1px solid #333;
-		&.white-dwarf {
-			height: 22px;
-			width: 22px;
-		}
-		&.yellow {
-			height: 99px;
-			width: 99px;
-			background-color: yellow;
-		}
-		&.blue-giant {
-			height: 222px;
-			width: 222px;
-			background-color: #bbbbde;
-		}
-
-	}
 }

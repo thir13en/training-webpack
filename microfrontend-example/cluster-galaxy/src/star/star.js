@@ -1,3 +1,5 @@
+import styles from './star.scss';
+
 export default class Star {
 
 	render(parentId) {

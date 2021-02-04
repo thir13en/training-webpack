@@ -3,13 +3,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+	mode: 'production',
 	entry: {
 		star: './src/star.js',
 	},
 	output: {
 		path: path.resolve(__dirname, './dist'),
 	},
-	mode: 'production',
 	module:{
 		rules: [
 			{
