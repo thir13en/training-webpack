@@ -5,4 +5,6 @@ console.log('hey ho, lets go!');
 
 const star = new Star();
 
-star.render();
+for (let i=0; i<222; i++) {
+	star.render('#cluster-galaxy');
+}
