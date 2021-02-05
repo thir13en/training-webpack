@@ -1,15 +1,21 @@
 {
-  "name": "star",
+  "name": "cluster-galaxy",
   "version": "1.0.0",
-  "description": "star generator",
-  "main": "index.js",
+  "description": "cluster-galaxy",
   "author": "santiloopz",
   "license": "MIT",
   "scripts": {
+    "start": "node src/server.js",
     "build": "webpack --config webpack.prod.config.js",
     "build:dev": "webpack --config webpack.dev.config.js"
   },
+  "dependencies": {
+    "express": "~4.17.1"
+  },
   "devDependencies": {
+    "@babel/core": "~7.12.13",
+    "@babel/preset-env": "~7.12.13",
+    "babel-loader": "~8.2.2",
     "clean-webpack-plugin": "~3.0.0",
     "css-loader": "~5.0.1",
     "file-loader": "~6.2.0",

@@ -4,13 +4,14 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 
 module.exports = {
+	mode: 'development',
 	entry: {
 		'cluster-galaxy': './src/cluster-galaxy.js',
 	},
 	output: {
 		path: path.resolve(__dirname, './dist'),
+		publicPath: 'http://localhost:3000/static/',
 	},
-	mode: 'development',
 	module:{
 		rules: [
 			{
