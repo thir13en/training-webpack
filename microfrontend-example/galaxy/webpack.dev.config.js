@@ -15,7 +15,7 @@ module.exports = {
 	output: {
 		filename: '[name].js',
 		path: path.resolve(__dirname, './dist'),
-		publicPath: '/static/',
+		publicPath: 'https://localhost:3001/',
 	},
 	module: {
 		rules: [
@@ -50,6 +50,13 @@ module.exports = {
 			remotes: {
 				'Star': 'Star@http://localhost:3000/static/star.js', 
 			},
+		}),
+		new ModuleFederationPlugin({
+			name: 'Galaxy',
+			filename: 'galaxy.js',
+			exposes: {
+				'./Galaxy': './src/galaxy/galaxy.js', 
+			}
 		}),
 	],
 };

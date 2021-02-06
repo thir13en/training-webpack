@@ -6,7 +6,7 @@ const { ModuleFederationPlugin } = require('webpack').container;
 module.exports = {
 	mode: 'development',
 	entry: {
-		'cluster-galaxy': './src/cluster-galaxy.js',
+		'cluster-galaxy': './src/cluster-galaxy/cluster-galaxy.js',
 	},
 	output: {
 		path: path.resolve(__dirname, './dist'),
@@ -43,6 +43,13 @@ module.exports = {
 			filename: 'star.js',
 			exposes: {
 				'./Star': './src/star/star.js', 
+			}
+		}),
+		new ModuleFederationPlugin({
+			name: 'ClusterGalaxy',
+			filename: 'cluster-galaxy.js',
+			exposes: {
+				'./ClusterGalaxy': './src/cluster-galaxy/cluster-galaxy.js', 
 			}
 		}),
 	],

@@ -1,0 +1,8 @@
+{
+  "name": "multiverse",
+  "version": "1.0.0",
+  "description": "The container of it al",
+  "main": "index.js",
+  "author": "santiloopz",
+  "license": "MIT"
+}
