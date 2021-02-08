@@ -5,12 +5,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
 	mode: 'development',
 	entry: {
-		multiverse: 'src/multiverse.js', 
+		multiverse: './src/multiverse.js', 
 	},
 	output: {
 		filename: '[name].js',
 		path: path.resolve(__dirname, './dist'),
-		publicpath: 'http;//localhost:9000/',
+		publicPath: 'http;//localhost:9000/',
 	},
 	module: {
 		rules: [
