@@ -10,7 +10,7 @@ module.exports = {
 	output: {
 		filename: '[name].js',
 		path: path.resolve(__dirname, './dist'),
-		publicPath: 'http;//localhost:9000/',
+		publicPath: 'http://localhost:9000/static',
 	},
 	module: {
 		rules: [

@@ -6,8 +6,12 @@
   "author": "santiloopz",
   "license": "MIT",
   "scripts": {
+    "start": "node src/server.js",
     "build": "webpack --config webpack.prod.config.js",
     "build:dev": "webpack --config webpack.dev.config.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@babel/core": "~7.12.13",
