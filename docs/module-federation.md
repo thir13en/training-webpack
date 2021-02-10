@@ -63,3 +63,15 @@ This loaded module is not bundled in the initial build, it is loaded dynamically
 If you perform any change in some of the federated modules, are the consumer will benefit from the updates, since the modules are consumed at runtime.
 
 ### Microfrontends, the new paradigm
+Now you will create a module that serves the rest of the modules as microfrontends, for this you need to apply the configuration above and also add a new property in the `devServer`:
+```javascript
+devServer: {
+	contentBase: path.resolve(__dirname, './dist'),
+	index: 'multiverse.html',
+	port: 9000,
+	// Check this out, this redirects any root to your home
+	historyApiFallback: {
+		index: 'multiverse.html',
+	},
+},
+```

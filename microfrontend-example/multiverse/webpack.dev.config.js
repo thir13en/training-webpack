@@ -1,9 +1,19 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { ModuleFederationPlugin } = require('webpack').container;
 
 module.exports = {
 	mode: 'development',
+	devServer: {
+		contentBase: path.resolve(__dirname, './dist'),
+		index: 'multiverse.html',
+		port: 9000,
+		// Check this out, this redirects any root to your home
+		historyApiFallback: {
+			index: 'multiverse.html',
+		},
+	},
 	entry: {
 		multiverse: './src/multiverse.js', 
 	},
@@ -33,12 +43,16 @@ module.exports = {
 		new HTMLWebpackPlugin({
 			template: './src/index.hbs',
 			filename: 'multiverse.html',
-			title: 'Galaxy holder',
-			description: 'The mother of all galaxies',
-			chunks: ['multiverse'],
 		}),
 		new CleanWebpackPlugin({
 			cleanOnceBeforeBuildPatters: ['**/*', path.join(process.cwd(), 'build/**/*')],
+		}),
+		new ModuleFederationPlugin({
+			name: 'Multiverse',
+			remotes: {
+				Galaxy: 'Galaxy@http://localhost:3001/galaxy.js',
+				ClusterGalaxy: 'ClusterGalaxy@http://localhost:3000/cluster-galaxy.js',
+			},
 		}),
 	],
 }
