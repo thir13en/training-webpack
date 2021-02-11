@@ -20,7 +20,7 @@ module.exports = {
 	output: {
 		filename: '[name].js',
 		path: path.resolve(__dirname, './dist'),
-		publicPath: 'http://localhost:9000/static',
+		publicPath: 'http://localhost:9000/',
 	},
 	module: {
 		rules: [
@@ -50,8 +50,8 @@ module.exports = {
 		new ModuleFederationPlugin({
 			name: 'Multiverse',
 			remotes: {
-				Galaxy: 'Galaxy@http://localhost:3001/galaxy.js',
-				ClusterGalaxy: 'ClusterGalaxy@http://localhost:3000/cluster-galaxy.js',
+				Galaxy: 'Galaxy@http://localhost:3001/remote-galaxy.js',
+				// ClusterGalaxy: 'ClusterGalaxy@http://localhost:3000/remote-cluster-galaxy.js',
 			},
 		}),
 	],

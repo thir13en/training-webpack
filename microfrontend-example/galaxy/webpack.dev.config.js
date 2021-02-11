@@ -10,7 +10,7 @@ module.exports = {
 		index: 'index.html',
 	},
 	entry: {
-		galaxy: './src/galaxy.js',
+		galaxy: './src/galaxy/galaxy.js',
 	},
 	output: {
 		filename: '[name].js',
@@ -53,7 +53,7 @@ module.exports = {
 		}),
 		new ModuleFederationPlugin({
 			name: 'Galaxy',
-			filename: 'galaxy.js',
+			filename: 'remote-galaxy.js',
 			exposes: {
 				'./Galaxy': './src/galaxy/galaxy.js', 
 			}

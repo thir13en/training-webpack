@@ -47,7 +47,7 @@ module.exports = {
 		}),
 		new ModuleFederationPlugin({
 			name: 'ClusterGalaxy',
-			filename: 'cluster-galaxy.js',
+			filename: 'remote-cluster-galaxy.js',
 			exposes: {
 				'./ClusterGalaxy': './src/cluster-galaxy/cluster-galaxy.js', 
 			}
