@@ -51,7 +51,7 @@ module.exports = {
 			name: 'Multiverse',
 			remotes: {
 				Galaxy: 'Galaxy@http://localhost:3001/remote-galaxy.js',
-				// ClusterGalaxy: 'ClusterGalaxy@http://localhost:3000/remote-cluster-galaxy.js',
+				ClusterGalaxy: 'ClusterGalaxy@http://localhost:3000/static/remote-cluster-galaxy.js',
 			},
 		}),
 	],
