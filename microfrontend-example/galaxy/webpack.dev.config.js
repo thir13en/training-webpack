@@ -10,12 +10,13 @@ module.exports = {
 		index: 'index.html',
 	},
 	entry: {
+		index: './src/index.js',
 		galaxy: './src/galaxy/galaxy.js',
 	},
 	output: {
 		filename: '[name].js',
 		path: path.resolve(__dirname, './dist'),
-		publicPath: 'https://localhost:3001/',
+		publicPath: 'http://localhost:3001/static/',
 	},
 	module: {
 		rules: [
@@ -40,7 +41,6 @@ module.exports = {
 			filename: 'galaxy.html',
 			title: 'Galaxy Generator',
 			description: 'Create a galaxy',
-			chunks: ['galaxy'],
 		}),
 		new CleanWebpackPlugin({
 			cleanOnceBeforeBuildPatters: ['**/*', path.join(process.cwd(), 'build/**/*')],
@@ -55,7 +55,7 @@ module.exports = {
 			name: 'Galaxy',
 			filename: 'remote-galaxy.js',
 			exposes: {
-				'./Galaxy': './src/galaxy/galaxy.js', 
+				'./Galaxy': './src/galaxy/galaxy.js',
 			}
 		}),
 	],

@@ -1,11 +1,16 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 
 module.exports = {
 	mode: 'development',
+	devServer: {
+		contentBase: path.resolve(__dirname, './dist'),
+		index: 'index.html',
+	},
 	entry: {
+		index: './src/index.js',
 		'cluster-galaxy': './src/cluster-galaxy/cluster-galaxy.js',
 	},
 	output: {

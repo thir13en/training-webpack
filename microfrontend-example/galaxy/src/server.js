@@ -12,4 +12,4 @@ app.get('/', (req, res) => {
 	res.send(contentFromHTMLFile);
 });
 
-app.listen(3001, () => console.log('Galaxy generated!'));
+app.listen(3001, () => console.log('Galaxy Created!'));
