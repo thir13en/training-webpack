@@ -4,6 +4,24 @@ body {
 
 #navbar {
 	display: flex;
-	height: 422px;
-	background-color: blue;
+	padding: 0 2rem;
+	margin-bottom: .5rem;
+	align-items: center;
+	height: 55px;
+	background-color: #e3e003;
+	.button-wrapper {
+		.nav-button {
+			padding: .5rem .9rem;
+			margin-right: 2rem;
+			border-radius: .3rem;
+			cursor: pointer;
+			box-shadow: none;
+			background-color: #c2e5fb;
+			transition: all .11s ease-in-out;
+			&:hover {
+				color: white;
+				background-color: #057eff;
+			}
+		}
+	}
 }

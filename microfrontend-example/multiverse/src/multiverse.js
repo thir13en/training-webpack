@@ -3,22 +3,23 @@ import style from './multiverse.scss';
 const url = window.location.pathname;
 
 if (url === '/galaxy') {
-	import ('Galaxy/Galaxy').then(GalaxyRemote => {
-		const Galaxy = GalaxyRemote.default;
-		const galaxy = new Galaxy();
-		galaxy.render();
-	});
+	const GalaxyRemote = await import ('Galaxy/Galaxy');
+	const Galaxy = GalaxyRemote.default;
+	const galaxy = new Galaxy();
+	galaxy.render();
 }
 if (url === '/cluster-galaxy') {
-	import ('ClusterGalaxy/ClusterGalaxy').then(ClusterGalaxyRemote => {
-		const ClusterGalaxy = ClusterGalaxyRemote.default;
-		const clusterGalaxy = new ClusterGalaxy();
-		clusterGalaxy.render();
-	});
+	const ClusterGalaxyRemote = await import ('ClusterGalaxy/ClusterGalaxy');
+	const ClusterGalaxy = ClusterGalaxyRemote.default;
+	const clusterGalaxy = new ClusterGalaxy();
+	clusterGalaxy.render();
 }
-	import ('Galaxy/Galaxy').then(GalaxyRemote => {
-		const Galaxy = GalaxyRemote.default;
-		const galaxy = new Galaxy();
-		galaxy.render();
-	});
+
+const galaxyButton = document.querySelector('.nav-button__galaxy');
+const clusterGalaxyButton = document.querySelector('.nav-button__cluster-galaxy');
+
+galaxyButton.addEventListener('click', () => window.location.href = 'galaxy');
+clusterGalaxyButton.addEventListener('click', () => window.location.href = 'cluster-galaxy');
+console.log(clusterGalaxyButton);
+
 console.log('connected...');

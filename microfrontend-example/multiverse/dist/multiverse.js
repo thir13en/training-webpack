@@ -14,9 +14,9 @@
 /*!***************************!*\
   !*** ./src/multiverse.js ***!
   \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _multiverse_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./multiverse.scss */ \"./src/multiverse.scss\");\n\nconst url = window.location.pathname;\n\nif (url === '/galaxy') {\n  __webpack_require__.e(/*! import() */ \"webpack_container_remote_Galaxy_Galaxy\").then(__webpack_require__.t.bind(__webpack_require__, /*! Galaxy/Galaxy */ \"webpack/container/remote/Galaxy/Galaxy\", 23)).then(GalaxyRemote => {\n    const Galaxy = GalaxyRemote.default;\n    const galaxy = new Galaxy();\n    galaxy.render();\n  });\n}\n\nif (url === '/cluster-galaxy') {\n  __webpack_require__.e(/*! import() */ \"webpack_container_remote_ClusterGalaxy_ClusterGalaxy\").then(__webpack_require__.t.bind(__webpack_require__, /*! ClusterGalaxy/ClusterGalaxy */ \"webpack/container/remote/ClusterGalaxy/ClusterGalaxy\", 23)).then(ClusterGalaxyRemote => {\n    const ClusterGalaxy = ClusterGalaxyRemote.default;\n    const clusterGalaxy = new ClusterGalaxy();\n    clusterGalaxy.render();\n  });\n}\n\n__webpack_require__.e(/*! import() */ \"webpack_container_remote_Galaxy_Galaxy\").then(__webpack_require__.t.bind(__webpack_require__, /*! Galaxy/Galaxy */ \"webpack/container/remote/Galaxy/Galaxy\", 23)).then(GalaxyRemote => {\n  const Galaxy = GalaxyRemote.default;\n  const galaxy = new Galaxy();\n  galaxy.render();\n});\nconsole.log('connected...');\n\n//# sourceURL=webpack://multiverse/./src/multiverse.js?");
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {\n__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _multiverse_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./multiverse.scss */ \"./src/multiverse.scss\");\n\nvar url = window.location.pathname;\n\nif (url === '/galaxy') {\n  var GalaxyRemote = await __webpack_require__.e(/*! import() */ \"webpack_container_remote_Galaxy_Galaxy\").then(__webpack_require__.t.bind(__webpack_require__, /*! Galaxy/Galaxy */ \"webpack/container/remote/Galaxy/Galaxy\", 23));\n  var Galaxy = GalaxyRemote[\"default\"];\n  var galaxy = new Galaxy();\n  galaxy.render();\n}\n\nif (url === '/cluster-galaxy') {\n  var ClusterGalaxyRemote = await __webpack_require__.e(/*! import() */ \"webpack_container_remote_ClusterGalaxy_ClusterGalaxy\").then(__webpack_require__.t.bind(__webpack_require__, /*! ClusterGalaxy/ClusterGalaxy */ \"webpack/container/remote/ClusterGalaxy/ClusterGalaxy\", 23));\n  var ClusterGalaxy = ClusterGalaxyRemote[\"default\"];\n  var clusterGalaxy = new ClusterGalaxy();\n  clusterGalaxy.render();\n}\n\nvar galaxyButton = document.querySelector('.nav-button__galaxy');\nvar clusterGalaxyButton = document.querySelector('.nav-button__cluster-galaxy');\ngalaxyButton.addEventListener('click', function () {\n  return window.location.href = 'galaxy';\n});\nclusterGalaxyButton.addEventListener('click', function () {\n  return window.location.href = 'cluster-galaxy';\n});\nconsole.log(clusterGalaxyButton);\nconsole.log('connected...');\n__webpack_handle_async_dependencies__();\n}, 1);\n\n//# sourceURL=webpack://multiverse/./src/multiverse.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mul
   \**********************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\n  margin: 0; }\\n\\n#navbar {\\n  display: flex;\\n  height: 422px;\\n  background-color: blue; }\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://multiverse/./src/multiverse.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\n  margin: 0; }\\n\\n#navbar {\\n  display: flex;\\n  padding: 0 2rem;\\n  margin-bottom: .5rem;\\n  align-items: center;\\n  height: 55px;\\n  background-color: #e3e003; }\\n  #navbar .button-wrapper .nav-button {\\n    padding: .5rem .9rem;\\n    margin-right: 2rem;\\n    border-radius: .3rem;\\n    cursor: pointer;\\n    box-shadow: none;\\n    background-color: #c2e5fb;\\n    transition: all .11s ease-in-out; }\\n    #navbar .button-wrapper .nav-button:hover {\\n      color: white;\\n      background-color: #057eff; }\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://multiverse/./src/multiverse.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -144,6 +144,82 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	__webpack_require__.i = [];
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/async module */
+/******/ 	(() => {
+/******/ 		var webpackThen = typeof Symbol === "function" ? Symbol("webpack then") : "__webpack_then__";
+/******/ 		var webpackExports = typeof Symbol === "function" ? Symbol("webpack exports") : "__webpack_exports__";
+/******/ 		var completeQueue = (queue) => {
+/******/ 			if(queue) {
+/******/ 				queue.forEach(fn => fn.r--);
+/******/ 				queue.forEach(fn => fn.r-- ? fn.r++ : fn());
+/******/ 			}
+/******/ 		}
+/******/ 		var completeFunction = fn => !--fn.r && fn();
+/******/ 		var queueFunction = (queue, fn) => queue ? queue.push(fn) : completeFunction(fn);
+/******/ 		var wrapDeps = (deps) => (deps.map((dep) => {
+/******/ 			if(dep !== null && typeof dep === "object") {
+/******/ 				if(dep[webpackThen]) return dep;
+/******/ 				if(dep.then) {
+/******/ 					var queue = [], result;
+/******/ 					dep.then((r) => {
+/******/ 						obj[webpackExports] = r;
+/******/ 						completeQueue(queue);
+/******/ 						queue = 0;
+/******/ 					});
+/******/ 					var obj = { [webpackThen]: (fn, reject) => { queueFunction(queue, fn); dep.catch(reject); } };
+/******/ 					return obj;
+/******/ 				}
+/******/ 			}
+/******/ 			return { [webpackThen]: (fn) => { completeFunction(fn); }, [webpackExports]: dep };
+/******/ 		}));
+/******/ 		__webpack_require__.a = (module, body, hasAwait) => {
+/******/ 			var queue = hasAwait && [];
+/******/ 			var exports = module.exports;
+/******/ 			var currentDeps;
+/******/ 			var outerResolve;
+/******/ 			var reject;
+/******/ 			var isEvaluating = true;
+/******/ 			var nested = false;
+/******/ 			var whenAll = (deps, onResolve, onReject) => {
+/******/ 				if (nested) return;
+/******/ 				nested = true;
+/******/ 				onResolve.r += deps.length;
+/******/ 				deps.map((dep, i) => {
+/******/ 					dep[webpackThen](onResolve, onReject);
+/******/ 				});
+/******/ 				nested = false;
+/******/ 			};
+/******/ 			var promise = new Promise((resolve, rej) => {
+/******/ 				reject = rej;
+/******/ 				outerResolve = () => {
+/******/ 					resolve(exports);
+/******/ 					completeQueue(queue);
+/******/ 					queue = 0;
+/******/ 				};
+/******/ 			});
+/******/ 			promise[webpackExports] = exports;
+/******/ 			promise[webpackThen] = (fn, rejectFn) => {
+/******/ 				if (isEvaluating) { return completeFunction(fn); }
+/******/ 				if (currentDeps) whenAll(currentDeps, fn, rejectFn);
+/******/ 				queueFunction(queue, fn);
+/******/ 				promise.catch(rejectFn);
+/******/ 			};
+/******/ 			module.exports = promise;
+/******/ 			body((deps) => {
+/******/ 				if(!deps) return outerResolve();
+/******/ 				currentDeps = wrapDeps(deps);
+/******/ 				var fn, result;
+/******/ 				var promise = new Promise((resolve, reject) => {
+/******/ 					fn = () => (resolve(result = currentDeps.map(d => d[webpackExports])))
+/******/ 					fn.r = 0;
+/******/ 					whenAll(currentDeps, fn, reject);
+/******/ 				});
+/******/ 				return fn.r ? promise : result;
+/******/ 			}).then(outerResolve, reject);
+/******/ 			isEvaluating = false;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
@@ -236,7 +312,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("8780c07e7d20cac01cce")
+/******/ 		__webpack_require__.h = () => ("0cdf38daa824ccad4fad")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */

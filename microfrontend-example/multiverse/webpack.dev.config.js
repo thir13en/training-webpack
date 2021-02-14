@@ -14,6 +14,9 @@ module.exports = {
 			index: 'multiverse.html',
 		},
 	},
+	experiments: {
+		topLevelAwait: true,
+	},
 	entry: {
 		multiverse: './src/multiverse.js', 
 	},
@@ -34,8 +37,17 @@ module.exports = {
 			},
 			{
 				test: /\.js$/,
-				use: ['babel-loader'],
-				exclude: /node_modules/
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env'],
+						plugins: [
+							'@babel/plugin-proposal-class-properties',
+							'transform-async-to-generator',
+						],
+					},
+				},
+				exclude: /node_modules/,
 			},
 		],
 	},
