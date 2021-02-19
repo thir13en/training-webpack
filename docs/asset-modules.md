@@ -29,10 +29,68 @@ module: {
 		},
 		{
 			test: /\.png$/,
-			type: 'asset/resource', // default can be 'asset/inline' / 'asset/source'
+			type: 'asset/resource', // default, also can be 'asset/inline' / 'asset/source'
 			use: ['file-loader'],
 		},
 	],
 },
 ```
 Use asset inline when you have many many tiny files that would trigger many HTTP request.
+
+### General Asset type
+Webpack automatically choose from inline or resource based on the size of the file.
+```javascrìpt
+module: {
+	rules: [
+		{
+			test: /\.hbs$/,
+			use: ['handlebars-loader'],
+		},
+		{
+			test: /\.(s*)css$/,
+			use: ['style-loader', 'css-loader', 'sass-loader'],
+		},
+		{
+			test: /\.js$/,
+			exclude: /node_modules/,
+			use: ['babel-loader'],
+		},
+		{
+			test: /\.png$/,
+			type: 'asset', // decide dynamically based on the size of the asset
+			parser: {
+				dataUrlCondition: {
+					maxSize: 3 * 1024, // 3 kb
+				},
+			},
+			use: ['file-loader'],
+		},
+	],
+},
+```
+
+### Asset Source
+Embeds the content of the file as is in the JavaScript bundle
+```javascrìpt
+module: {
+	rules: [
+		{
+			test: /\.hbs$/,
+			use: ['handlebars-loader'],
+		},
+		{
+			test: /\.(s*)css$/,
+			use: ['style-loader', 'css-loader', 'sass-loader'],
+		},
+		{
+			test: /\.js$/,
+			exclude: /node_modules/,
+			use: ['babel-loader'],
+		},
+		{
+			test: /\.txt$/,
+			type: 'asset/source', // no need to specify loader here
+		},
+	],
+},
+```
