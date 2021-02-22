@@ -9,7 +9,8 @@
     "start": "node src/server.js",
     "serve": "webpack serve --config webpack.dev.config.js",
     "build": "webpack --config webpack.prod.config.js",
-    "build:dev": "webpack --config webpack.dev.config.js --hot"
+    "build:dev": "webpack --config webpack.dev.config.js --hot",
+    "lint": "eslint ."
   },
   "dependencies": {
     "express": "~4.17.1"
@@ -18,9 +19,10 @@
     "@babel/core": "~7.12.13",
     "@babel/preset-env": "~7.12.13",
     "babel-loader": "~8.2.2",
-    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-async-to-generator": "~6.24.1",
     "clean-webpack-plugin": "~3.0.0",
     "css-loader": "~5.0.1",
+    "eslint": "~7.20.0",
     "handlebars": "~4.7.6",
     "handlebars-loader": "~1.7.1",
     "html-webpack-plugin": "~5.0.0",
