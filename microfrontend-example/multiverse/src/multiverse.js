@@ -3,14 +3,14 @@ import style from './multiverse.scss';
 const url = window.location.pathname;
 
 if (url === '/galaxy') {
-	const GalaxyRemote = await import ('Galaxy/Galaxy');
-	const Galaxy = GalaxyRemote.default;
+	const GalaxyRemote = async () => await import ('Galaxy/Galaxy');
+	const Galaxy = GalaxyRemote().default;
 	const galaxy = new Galaxy();
 	galaxy.render();
 }
 if (url === '/cluster-galaxy') {
-	const ClusterGalaxyRemote = await import ('ClusterGalaxy/ClusterGalaxy');
-	const ClusterGalaxy = ClusterGalaxyRemote.default;
+	const ClusterGalaxyRemote = async () => await import ('ClusterGalaxy/ClusterGalaxy');
+	const ClusterGalaxy = ClusterGalaxyRemote().default;
 	const clusterGalaxy = new ClusterGalaxy();
 	clusterGalaxy.render();
 }
