@@ -1,4 +1,4 @@
-import style from './multiverse.scss';
+import './multiverse.scss';
 
 const url = window.location.pathname;
 
