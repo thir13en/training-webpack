@@ -9,7 +9,7 @@ Would you like to create several `html` files for each component, you'd need to 
 By default, `webpack` includes dependencies in all the bundles that request them. WE can tweak that with the `optimization` field of our configuration as shown in [here](../minimal-conf-code-splitting/webpack.prod.conf.js):
 ```javascript
 optimization: {
-	splitChuncks: {
+	splitChunks: {
 		chunks: 'all',
 	}
 },
