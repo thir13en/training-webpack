@@ -1,7 +1,7 @@
 {
   "name": "minimal-config-hanldebar",
   "version": "1.0.0",
-  "description": "minimal webpack config setup with handlebar",
+  "description": "setup with dev server",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.prod.config.js",
